@@ -3,11 +3,11 @@ package com.nodamu.hello;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
 class HelloApplicationTests {
 
     @Test
-    void contextLoads() {
+    void print_hello() {
+        System.out.println("Hello");
     }
 
 }
