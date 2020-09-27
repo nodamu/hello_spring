@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''
 chmod +x gradlew'''
-        sh 'sh "./gradlew clean test"'
+        sh './gradlew clean test'
       }
     }
 
