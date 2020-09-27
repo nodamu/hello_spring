@@ -7,7 +7,7 @@ class HelloApplicationTests {
 
     @Test
     void print_hello() {
-        System.out.println("Hello");
+        System.out.println("Hello Jenkins");
     }
 
 }
