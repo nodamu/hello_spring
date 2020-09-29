@@ -23,8 +23,12 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+def commitId = 'git rev-parse --verify HEAD'.execute().text.trim()
+
 jib{
     to {
-        image = "nickadamu/hello_spring:${project.tag}"
+        image = "nickadamu/hello_spring"
+        tags = [commitId, 'latest']
     }
 }
