@@ -1,0 +1,19 @@
+language: java
+
+services:
+  - docker
+
+before_install:
+  - chmod +x gradlew && chmod +x docker_build.sh
+
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+
+jobs:
+  include:
+      - stage: Unit test
+        script: sh ./gradlew clean test
+
+      - stage: Docker Build
+        script: sh docker_build.sh

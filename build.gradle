@@ -23,4 +23,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-jib.to.image = "nickadamu/hello_spring"
+jib{
+    to {
+        image = "nickadamu/hello_spring:${project.tag}"
+    }
+}
