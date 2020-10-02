@@ -1,10 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Unit test') {
+    stage('Unit Test') {
       steps {
-        sh '''
-chmod +x gradlew'''
+        sh 'chmod +x gradlew'
+        sh '''sudo apt install default-jdk
+'''
         sh './gradlew clean test'
       }
     }
