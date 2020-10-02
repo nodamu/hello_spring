@@ -4,7 +4,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         sh 'chmod +x gradlew'
-        sh '''apt install default-jdk
+        sh '''sudo apt install default-jdk
 '''
         sh './gradlew clean test'
       }
