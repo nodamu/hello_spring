@@ -4,7 +4,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         sh 'chmod +x gradlew'
-        sh 'java -version'
+        sh 'java -version && echo JAVA_HOME'
       }
     }
 
